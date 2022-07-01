@@ -20,14 +20,9 @@ def second_page():
     return render_template("bootstrap.html")
 
 
-@app.route("/option-one")
+@app.route("/input-form")
 def option_one():
-    return render_template("option_one.html")
-
-
-@app.route("/option-two")
-def option_two():
-    return render_template("option_two.html")
+    return render_template("input_form.html")
 
 
 if __name__ == "__main__":

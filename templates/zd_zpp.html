@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+    <div>
+        <h1 class="text-center">CSO Apps</h1>
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Tracking
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <div class="mb-3">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Track Using</option>
+                                <option value="1">Tracking Number</option>
+                                <option value="2">PO Number</option>
+                                <option value="3">Site Order ID</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <input class="form-control" type="text" placeholder="Default input"
+                                aria-label="default input example">
+                        </div>
+                        <div class="d-grid gap-2 col-6 mx-auto">
+                            <button class="btn btn-primary" type="button">Get Tracking</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Returns
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Track Using</option>
+                            <option value="1">Tracking Number</option>
+                            <option value="2">PO Number</option>
+                            <option value="3">Site Order ID</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+<script src="https://static.zdassets.com/zendesk_app_framework_sdk/2.0/zaf_sdk.min.js"></script>
+<script>
+    // Initialise Apps framework client. See also:
+    // https://developer.zendesk.com/documentation/apps/app-developer-guide/getting_started
+    var client = ZAFClient.init();
+    client.invoke('resize', { width: '100%', height: '500px' });
+</script>
+
+</html>

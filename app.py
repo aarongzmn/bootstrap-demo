@@ -25,6 +25,11 @@ def option_one():
     return render_template("input_form.html")
 
 
+@app.route("/zd-app")
+def zd_app():
+    return render_template("zd_zpp.html")
+
+
 if __name__ == "__main__":
     """Checks operating system.
     If Windows, it runs the app in dev/debug mode.
